@@ -1,5 +1,5 @@
 FROM python:3.9-alpine
-WORKDIR /Kubesimplify-CI-CD
+WORKDIR /usr/src/app
 ENV  MSG="Hello World!"
 COPY . .
 RUN pip3 install -r requirement.txt
