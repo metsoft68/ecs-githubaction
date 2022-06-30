@@ -51,33 +51,9 @@
     ],
     "placementConstraints": [],
     "memory": "1024",
-    "taskRoleArn": null,
-    "compatibilities": [
-      "EXTERNAL",
-      "EC2"
-    ],
     "taskDefinitionArn": "arn:aws:ecs:eu-west-1:132248825767:task-definition/ecs-taskdef-github:1",
     "family": "ecs-taskdef-github",
-    "requiresAttributes": [
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.ecr-auth"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.execution-role-ecr-pull"
-      }
-    ],
+    
     "pidMode": null,
     "requiresCompatibilities": [
       "EC2"
@@ -85,8 +61,6 @@
     "networkMode": null,
     "runtimePlatform": null,
     "cpu": "1024",
-    "revision": 1,
-    "status": "ACTIVE",
     "inferenceAccelerators": null,
     "proxyConfiguration": null,
     "volumes": []
