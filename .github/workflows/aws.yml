@@ -36,7 +36,7 @@ env:
   ECR_REPOSITORY: "ecs-github-action"           # set this to your Amazon ECR repository name
   ECS_SERVICE: "ecs-service-github"                 # set this to your Amazon ECS service name
   ECS_CLUSTER: "ecs-cluster-github-action"                # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: ".aws/task-definition.json"    # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: "aws-task-definition.json"    # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: "ecs-github-action"           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
@@ -87,7 +87,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: task-definition.json
+        task-definition: aws-task-definition.json
         container-name: ${{ env.CONTAINER_NAME }}
         image: ${{ steps.build-image.outputs.image }}
 
